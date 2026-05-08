@@ -16,4 +16,8 @@ public class Produk {
     public void tampilProduk() {
         System.out.println(kodeProduk + " - " + namaProduk + " - Rp " + harga);
     }
+
+    public String getNamaProduk() {
+        return this.namaProduk;
+    }
 }

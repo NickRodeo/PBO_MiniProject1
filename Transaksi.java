@@ -8,6 +8,10 @@ public class Transaksi {
     ArrayList<Double> riwayatSubtotal = new ArrayList<>();
 
     public void pesan(Produk produk, int qty) {
+        if(produk == null){
+            System.out.println("Menu tersebut tidak ada");
+            return;
+        }
         if (produk.stok >= qty) {
             double subtotal = produk.harga * qty;
 
