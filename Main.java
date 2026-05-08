@@ -12,7 +12,7 @@ public class Main {
     public static void main(String[] args) {
          // Header sistem
          System.out.println("=== SISTEM POINT OF SALE ===");
-         System.out.println("Bisnis: [Nama Bisnis] - Pontianak");
+         System.out.println("Bisnis: Warung Bakso Tyga Sapi - Pontianak");
          System.out.println();
          
          // 1. Membuat array produk (minimal 5)
