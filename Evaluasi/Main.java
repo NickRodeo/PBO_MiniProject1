@@ -7,7 +7,7 @@
  */
 
 import java.util.ArrayList;
-import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
          // Header sistem
@@ -17,7 +17,7 @@ public class Main {
          
          // 1. Membuat array produk (minimal 5)
          ArrayList<Produk> daftarProduk = new ArrayList<>();
-         
+
          // 2. Mengisi data produk
         daftarProduk.add(new Produk("P001", "Bakso Original", 10000, 10));
         daftarProduk.add(new Produk("P002", "Bakso Mercon", 15000, 10));
@@ -58,16 +58,12 @@ public class Main {
 
     public static void tampilDaftarProduk(ArrayList<Produk> daftarProduk){
         System.out.println("DAFTAR PRODUK:");
-         for (Produk p : daftarProduk)p.tampilProduk();
+         for (Produk p : daftarProduk) p.tampilProduk();
          System.out.println();
     }
 
-    public static Produk cariProduk(List<Produk> daftarProduk, String nama) {
-        for (Produk p : daftarProduk) {
-            if (p.getNamaProduk().equalsIgnoreCase(nama)) {
-                return p;
-            }
-        }
+    public static Produk cariProduk(ArrayList<Produk> daftarProduk, String nama) {
+        for (Produk p : daftarProduk) if (p.getNamaProduk().equalsIgnoreCase(nama)) return p;
         return null;
     }
 }

@@ -12,7 +12,7 @@ public class Transaksi {
             System.out.println("Menu tersebut tidak ada");
             return;
         }
-        if (produk.stok >= qty) {
+        if (produk.getStok() >= qty) {
             double subtotal = produk.harga * qty;
 
             riwayatPesanan.add(produk.namaProduk);
@@ -20,7 +20,7 @@ public class Transaksi {
             riwayatSubtotal.add(subtotal);
 
             totalHarga += subtotal;
-            produk.stok -= qty; 
+            produk.subtractStok(qty); 
             System.out.println("Ditambahkan ke pesanan: " + produk.namaProduk);
         } else {
             System.out.println("Maaf, stok " + produk.namaProduk + " tidak cukup!");

@@ -20,4 +20,12 @@ public class Produk {
     public String getNamaProduk() {
         return this.namaProduk;
     }
+
+    public int getStok(){
+        return this.stok;
+    }
+
+    public void subtractStok(int jumlah){
+        this.stok -= jumlah;
+    }
 }
